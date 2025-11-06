@@ -486,6 +486,19 @@ try {
             <div class="p-2 lg:p-1 main-content">
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col gap-8">
+                        <?php if ($isAdmin): ?>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h2 class="text-xl font-semibold text-text-light dark:text-text-dark">Awards Management</h2>
+                                <p class="text-sm text-text-muted-light dark:text-text-muted-dark mt-1">Review submissions, configure criteria, and manage awards</p>
+                            </div>
+                            <a href="user-awards.php"
+                               class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-600 text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200">
+                                <span class="material-symbols-outlined">upload_file</span>
+                                <span>Process Award</span>
+                            </a>
+                        </div>
+                        <?php endif; ?>
                         <div>
                             <div class="border-b border-border-light dark:border-border-dark">
                                 <nav aria-label="Tabs" class="-mb-px flex space-x-8">
