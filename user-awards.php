@@ -506,14 +506,19 @@ try {
             <div class="p-2 lg:p-1 main-content">
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col gap-8">
+                        <div class="flex justify-end">
+                            <a href="admin-awards.php"
+                               class="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200">
+                                <span class="material-symbols-outlined text-lg">arrow_back</span>
+                                <span>Go Back</span>
+                            </a>
+                        </div>
                         <div>
                             <div class="border-b border-border-light dark:border-border-dark">
                                 <nav aria-label="Tabs" class="-mb-px flex space-x-8">
-                                    <?php if (!$isAdmin): ?>
-                                        <a class="active tab-underline text-primary whitespace-nowrap py-4 px-1 font-bold text-sm relative"
-                                            href="#" id="process-tab">Process Award</a>
-                                    <?php endif; ?>
-                                    <a class="tab-underline border-transparent text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark hover:border-border-light dark:hover:border-border-dark whitespace-nowrap py-4 px-1 font-medium text-sm transition-colors duration-300<?php echo $isAdmin ? ' active font-bold text-primary' : ''; ?>"
+                                    <a class="active tab-underline text-primary whitespace-nowrap py-4 px-1 font-bold text-sm relative"
+                                        href="#" id="process-tab">Process Award</a>
+                                    <a class="tab-underline border-transparent text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark hover:border-border-light dark:hover:border-border-dark whitespace-nowrap py-4 px-1 font-medium text-sm transition-colors duration-300"
                                         href="#" id="analytics-tab">Analytics Dashboard</a>
                                     <a class="tab-underline border-transparent text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark hover:border-border-light dark:hover:border-border-dark whitespace-nowrap py-4 px-1 font-medium text-sm transition-colors duration-300"
                                         href="#" id="award-list-tab">Award List<?php echo $isAdmin ? ' & Criteria' : ''; ?></a>
@@ -522,7 +527,6 @@ try {
                         </div>
 
                         <!-- Process Award Tab Content -->
-                        <?php if (!$isAdmin): ?>
                         <div id="process-content" class="tab-content">
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                                 <div class="space-y-6">
@@ -727,7 +731,6 @@ try {
                             </div>
                         </div>
                     </div>
-                    <?php endif; ?>
 
                     <!-- Analytics Dashboard Tab Content -->
                     <div id="analytics-content" class="tab-content hidden">
